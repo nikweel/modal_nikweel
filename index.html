@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/modal.js"></script>
+</head>
+
+<body>
+
+    <div id="button">click me!</div>
+
+    <script>
+
+        let data = `<div>Hello modal</div>`;
+
+        button.onclick = function () {
+
+            new Nikweel_modal({
+                modal_overlay_classList: ["MyBody"], //Свои классы overlay (text)
+                modal_overlay_color: '', //Цвет bg overlay (css text)
+                modal_overlay_zindex: -999999, //Положение overlay (number)
+                modal_overlay_click_exit: true, //Закрыть при клике на overlay (false/true)
+                modal_window_wrapper_classList: ["MyWindow"], //Свои классы window (text)
+                modal_window_wrapper_drag: false, //Включить перетаскивание окна (false/true)
+                modal_window_wrapper_close_button: true, //Добавить крестик закрытия (false/true)
+                modal_window_wrapper_close_time: false, //Закрыть через X секунд (false/number)
+                modal_load_spiner: true, //Добавить прелоадер (false/true)
+                init: async function ($modal_body) {
+                    $modal_body.innerHTML = data;
+                },
+                destroy: function () { }
+            })
+
+        };
+    </script>
+</body>
+
+</html>
