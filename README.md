@@ -1,5 +1,5 @@
 # modal_nikweel
-Javascript modal plugin
+Javascript simple  modal plugin
 
 ## Getting started
 
