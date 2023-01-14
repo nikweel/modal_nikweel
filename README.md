@@ -4,7 +4,7 @@ Javascript modal plugin
 ## Getting started
 
 ```html
-<script src="/modal_nikweel.js"></script>
+<script src="modal_nikweel.js"></script>
 ```
 
 ```html
