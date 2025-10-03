@@ -91,23 +91,6 @@ destroy	Function	Function called when the modal is closed.
 
 You can open modal windows inside other modal windows:
 
-```javascript
-function openSecondModal() {
-    new NikweelModal({
-        modalOverlayClassList: ["custom-overlay"],
-        modalOverlayColor: 'rgba(0, 0, 0, 0.5)',
-        modalWindowWrapperDrag: true,
-        init: async function ($modalBody) {
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            $modalBody.innerHTML = 'This is the second modal window!';
-        },
-        destroy: function () {
-            console.log('Second modal window closed');
-        }
-    });
-}
-```
-
 ## License
 
 This project is licensed under the MIT License.
@@ -180,26 +163,9 @@ document.getElementById('button').onclick = function () {
 | `init`                          | `Function`   | Функция инициализации контента модального окна.                          |
 | `destroy`                       | `Function`   | Функция, вызываемая при закрытии модального окна.                        |
 
-## Пример с вложенными модальными окнами
+## Вложенные модальные окна
 
 Вы можете открывать модальные окна внутри других модальных окон:
-
-```javascript
-function openSecondModal() {
-    new NikweelModal({
-        modalOverlayClassList: ["custom-overlay"],
-        modalOverlayColor: 'rgba(0, 0, 0, 0.5)',
-        modalWindowWrapperDrag: true,
-        init: async function ($modalBody) {
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            $modalBody.innerHTML = 'Это второе модальное окно!';
-        },
-        destroy: function () {
-            console.log('Второе модальное окно закрыто');
-        }
-    });
-}
-```
 
 ## Лицензия
 
